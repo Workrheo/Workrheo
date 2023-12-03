@@ -1,0 +1,68 @@
+{% extends 'ibase1.html' %}
+
+{% load static %}
+
+
+{% load bootstrap4 %}
+
+
+
+
+{% block body %}
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0246760730956!2d77.57995147535999!3d12.906134787403209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156cf60d2733%3A0xd0ba134c9f3d4f09!2sDialogues%20Cafe%20JP%20Nagar!5e0!3m2!1sen!2sin!4v1699531455885!5m2!1sen!2sin" width="1500" height="900" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<div id="wrapper-content" class="wrapper-content pt-0 pb-13">
+    <div class="container">
+        <div class="pt-12">
+            <div class="heading text-center mb-10">
+                <h3 class="mb-0 lh-12">Contact us for any further questions, possible projects
+                    and business partnerships</h3>
+            </div>
+            <div class="row mb-10">
+                <div class="col-md-4 mb-5 mb-md-0">
+                    <div class="text-center">
+                        <h5 class="font-weight-normal text-uppercase mb-5">Contact Directly</h5>
+                        <div class="d-flex flex-column">
+                            <span>hello@workrheo.com</span>
+                            <span>(+91) 7406096991</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5 mb-md-0">
+                    <div class="text-center">
+                        <h5 class="font-weight-normal text-uppercase mb-5">Visit our office</h5>
+                        <div class="d-flex flex-column">
+                            <span>619, 15th Cross Rd, Gangadhar Nagar Phase , </span>
+                            <span>J. P. Nagar 6, Bengaluru, Karnataka 560078</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info-item text-center">
+                        <h5 class="font-weight-normal text-uppercase mb-5">work with us</h5>
+                        <div class="d-flex flex-column">
+                            <span>Send your CV to our email:</span>
+                            <span>career@workrheo.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-contact">
+            <div class="form-wrapper px-3 px-sm-12 pt-11 pb-12">
+                <h3 class="mb-9 text-center">Get In Touch</h3>
+                <form  action="" method="POST">
+                    {% csrf_token %}
+                    {% bootstrap_form contact_form %}
+                    {% buttons %}
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    {% endbuttons %}
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
